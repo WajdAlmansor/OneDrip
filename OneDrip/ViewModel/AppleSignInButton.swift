@@ -30,7 +30,7 @@ struct AppleSignInButtonView: View {
                             }
 
                             if let records = records, records.isEmpty {
-                                // 🟢 المستخدم غير موجود، احفظه الآن
+                            
                                 CloudKitUserManager.shared.saveUser(
                                     id: userID,
                                     email: email,
@@ -40,10 +40,8 @@ struct AppleSignInButtonView: View {
                                 print("🔁 User already exists in CloudKit.")
                             }
 
-                            // ✅ نحفظ المعرف محليًا لتسجيل الدخول التلقائي لاحقًا
                             UserDefaults.standard.set(userID, forKey: "userID")
 
-                            // ✅ نكمل جلب البيانات
                             CloudKitJourneyManager.shared.fetchJourneys(for: userID) { journeys, error in
                                 if let error = error {
                                     print("❌ Error fetching journeys: \(error.localizedDescription)")
@@ -60,7 +58,6 @@ struct AppleSignInButtonView: View {
                                 }
                             }
 
-                            // ✅ المستخدم الآن مسجّل دخول
                             DispatchQueue.main.async {
                                 onSignedIn()
                             }

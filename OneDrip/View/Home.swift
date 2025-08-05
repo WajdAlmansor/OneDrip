@@ -5,12 +5,11 @@ struct Home: View {
         ZStack {
             Color("Background").ignoresSafeArea()
 
-            // العناصر الرئيسية: الهيدر + البيضاوي
             VStack {
                 HStack {
                     Button(action: {
                         print("plus tapped")
-                        // هنا تحط التنقل أو الوظيفة المطلوبة
+                
                     }) {
                         Image(systemName: "plus")
                             .font(.system(size: 30))
@@ -26,7 +25,7 @@ struct Home: View {
 
                     Button(action: {
                         print("gear tapped")
-                        // هنا برضو تقدر تفتح صفحة إعدادات مثلاً
+                    
                     }) {
                         Image(systemName: "gearshape")
                             .font(.system(size: 30))

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct JourneyDays: View {
     let totalDays = 10
-    @State private var selectedDay: Int? = nil // ← مو محدد بالبداية
+    @State private var selectedDay: Int? = nil
 
     var body: some View {
         ZStack {
@@ -30,7 +30,7 @@ struct JourneyDays: View {
                     Spacer()
 
                     Button(action: {
-                        // أضف هنا أكشن المؤقت
+                        
                         print("الضغط على المؤقت")
                     }) {
                         Image(systemName: "timer")

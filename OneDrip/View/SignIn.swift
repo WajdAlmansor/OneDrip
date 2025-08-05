@@ -16,13 +16,13 @@ struct SignIn: View {
             ZStack(alignment: .top) {
                 Color("Background").ignoresSafeArea()
 
-                // الخلفية
+            
                 RoundedRectangle(cornerRadius: 150, style: .continuous)
                     .fill(Color(hex: "B0E0E6"))
                     .frame(width: 401, height: 775)
                     .offset(y: 169)
 
-                // المحتوى العادي
+            
                 VStack(spacing: 16) {
                     VStack(spacing: 5) {
                         Text("OneDrip")
@@ -66,14 +66,14 @@ struct SignIn: View {
                     Spacer()
                 }
 
-                // النص المثبت فوق الزر
+                
                 Text("Join a quiet journey of progress, where\nyour skills grow one small drip at a time.")
                     .font(.system(size: 18, weight: .regular, design: .rounded))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.primary)
                     .position(x: 200.5, y: 580)
 
-                // زر تسجيل الدخول
+            
                 AppleSignInButtonView {
                     isSignedIn = true
                 }
@@ -86,7 +86,6 @@ struct SignIn: View {
     }
 }
 
-// دعم الهكس
 extension Color {
     init(hex: String) {
         let scanner = Scanner(string: hex)

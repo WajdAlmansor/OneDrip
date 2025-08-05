@@ -6,7 +6,7 @@ struct Timer: View {
             Color("Background").ignoresSafeArea()
 
             VStack {
-                // Header
+        
                 HStack {
                     Button(action: {
                         print("رجوع")
@@ -34,7 +34,7 @@ struct Timer: View {
                 }
                 .padding()
 
-                // Date
+            
                 VStack(spacing: 8) {
                     Text("1 May")
                         .font(.system(size: 30, weight: .regular, design: .rounded))
@@ -44,7 +44,7 @@ struct Timer: View {
                 }
                 .padding(.top, 20)
 
-                // Circle Timer
+            
                 ZStack {
                     Circle()
                         .fill(Color(hex: "#FFE5B2"))
@@ -60,7 +60,7 @@ struct Timer: View {
                 }
                 .padding(.top, 20)
 
-                // Buttons
+            
                 VStack(spacing: 16) {
                     TimerButton(title: "Start", color: Color(hex: "#FFFFCC")) {
                         print("✅ Start pressed")

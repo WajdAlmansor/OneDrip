@@ -9,7 +9,7 @@ struct Settings: View {
 
             ScrollView {
                 VStack(spacing: 24) {
-                    // Header
+                
                     HStack {
                         Button(action: {
                             print("رجوع")
@@ -26,7 +26,7 @@ struct Settings: View {
 
                         Spacer()
 
-                        // توازن بصري
+                
                         Image(systemName: "chevron.backward")
                             .font(.system(size: 30))
                             .opacity(0)
@@ -34,7 +34,7 @@ struct Settings: View {
                     .padding(.horizontal)
 
                     Spacer()
-                    // Account Section
+                    
                     SettingsSection(title: "Account", color: Color(hex: "#B2EBF2")) {
                         VStack(alignment: .leading, spacing: 12) {
                             HStack {
@@ -62,13 +62,13 @@ struct Settings: View {
                         .padding(.vertical, 12)
                     }
 
-                    // Notifications Section
+                
                     SettingsSection(title: "Notifications", color: Color(hex: "#CE93D8")) {
                         Toggle("Enable Notifications", isOn: $notificationsEnabled)
                             .padding(.vertical, 12)
                     }
 
-                    // Privacy / Backup
+                
                     SettingsSection(title: "Privacy / Backup", color: Color(hex: "#FFAB91")) {
                         Button(action: {
                             print("iCloud Sync tapped")
@@ -82,7 +82,7 @@ struct Settings: View {
                             .padding(.horizontal)
                             .background(Color(hex: "#FFAB91"))
                             .foregroundColor(.black)
-                            .clipShape(RoundedRectangle(cornerRadius: 0)) // بدون زوايا داخلية
+                            .clipShape(RoundedRectangle(cornerRadius: 0)) 
                         }
                     }
 

@@ -5,7 +5,7 @@ struct SetUp: View {
     @StateObject private var viewModel = SetUpViewModel()
     var onJourneySaved: () -> Void
 
-    // ✅ هذا المفتاح يحفظ إذا المستخدم خلص الإعداد
+    
     @AppStorage("hasCompletedSetup") private var hasCompletedSetup = false
 
     var body: some View {
@@ -103,7 +103,7 @@ struct SetUp: View {
                                     print("✅ Journey saved: \(record)")
 
                                     DispatchQueue.main.async {
-                                        hasCompletedSetup = true  // ✅ تم إكمال الإعداد
+                                        hasCompletedSetup = true  
                                         onJourneySaved()
                                     }
 

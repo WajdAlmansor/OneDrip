@@ -8,7 +8,7 @@ struct DayCircleView: View {
 
     var body: some View {
         HStack(alignment: .top, spacing: 20) {
-            // الدائرة على اليسار
+            
             Circle()
                 .fill(Color(hex: "FEE4A4"))
                 .frame(width: 50, height: 50)
@@ -16,7 +16,7 @@ struct DayCircleView: View {
                 .shadow(radius: isSelected ? 8 : 2)
                 .animation(.easeInOut(duration: 0.25), value: isSelected)
 
-            // محتوى اليوم
+            
             if isSelected {
                 VStack(alignment: .leading, spacing: 16) {
                     Text("\(day) MAY")
@@ -26,11 +26,9 @@ struct DayCircleView: View {
                     Text("Accomplished:")
                         .foregroundColor(.gray)
 
-                    // TextEditor المخصص
                     CustomTextEditor(text: $noteText)
                         .frame(height: 130)
 
-                    // ScrollView للصور والفيديو
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 16) {
                             ForEach(contentButtons, id: \.icon) { item in
@@ -50,8 +48,7 @@ struct DayCircleView: View {
                         }
                         .padding(.vertical, 4)
                     }
-
-                    // زر التسجيل
+                    
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color(hex: "FFFDD0"))
                         .frame(width: 65, height: 65)

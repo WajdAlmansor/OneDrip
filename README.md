@@ -1,74 +1,36 @@
 # OneDrip 🌱
 
-**OneDrip** is an iOS habit-tracking app that empowers users to build new skills through tiny, consistent daily progress. The experience is quiet, visual, and encouraging — designed around the metaphor of a single water drop nurturing growth.
+**OneDrip** is a habit-building iOS app that helps users grow their skills through consistent, minimal daily effort. The concept is inspired by the idea of small progress — one drop at a time — leading to meaningful, lasting change.
 
 ## 🧠 Concept
 
-Instead of overwhelming users with complex productivity systems, OneDrip focuses on minimal daily input:  
-**"Just 1% better each day."**
+OneDrip encourages users to commit to a single goal and maintain a short daily routine. The experience is designed to be calming, focused, and motivating — using visuals, streaks, and gentle reminders to stay on track.
 
-It invites users to plan their journey, commit to a small daily session, and watch their streak grow over time — all through beautiful UI and personalized flow.
+## 🔨 Current Development
 
-## 📱 Key Features
+This project is currently **in development**. Several key components have already been implemented and are included in the codebase:
 
-- 📆 **Personalized Journey Setup**:  
-  Users define the skill they want to grow, how long they’ll commit, and how many minutes per day they’ll practice.
+- ✅ Full SwiftUI frontend with custom design elements and layout
+- ✅ Journey setup screen that collects user input (goal, duration, daily time, start time)
+- ✅ Apple Sign-In integration using `AuthenticationServices`
+- ✅ CloudKit integration for:
+  - Creating and saving user records
+  - Saving and retrieving "Journey" entries in the public iCloud database
+- ✅ Timeline-style scroll for daily reflections with support for notes, media, and voice input
+- ✅ Carousel for navigating between multiple journeys
+- ✅ Settings page with UI structure for account, notification, and privacy controls
 
-- 🧭 **Daily Check-in Timeline**:  
-  Scroll through visual markers for each day of your journey. Tap a day to reflect and add notes, photos, or voice logs.
+All data is stored securely in **Apple’s CloudKit**, not Firebase. The app avoids third-party backend services and relies entirely on the Apple ecosystem.
 
-- 🎡 **Carousel of Journeys**:  
-  Visually flip through multiple journeys and compare first vs latest progress.
+## 🚀 How to Run the Project
 
-- 🔐 **Apple Sign-In Integration**:  
-  Secure and seamless onboarding via Sign In with Apple.
-
-- ☁️ **CloudKit Storage**:  
-  All journey data is stored in Apple CloudKit for sync across devices.
-
-## 🧩 Tech Stack
-
-- **Frontend**: SwiftUI
-- **Authentication**: Sign in with Apple
-- **Database**: CloudKit (via public Cloud Database)
-- **Design Tools**: Figma
-- **State Management**: `@AppStorage`, `@StateObject`, MVVM-ish
-- **Other**: Custom components (carousel, day tracker, timers), dynamic color themes
-
-## ✅ Current Progress
-
-| Feature                            | Status      |
-|------------------------------------|-------------|
-| UI Design Implementation           | ✅ Completed |
-| Apple Sign-In                      | ✅ Integrated |
-| Journey Setup + CloudKit Save      | ✅ Working   |
-| Timeline Scroll + Reflections      | ✅ Done      |
-| Firebase Project                   | ✅ Created (for potential extension) |
-| User Record Fetching               | ✅ Implemented |
-| Journey Fetch + Display            | 🟡 In Progress |
-| Entries Display                    | 🟡 In Progress |
-| Notifications                      | 🔲 Not Started |
-| Final Data Binding + Sync          | 🔲 In Progress |
-
-## 🔧 Setup (Dev Environment)
-
-1. Clone this repo into Xcode.
-2. Make sure your Apple Developer account is connected.
-3. Ensure the correct **iCloud capability** and **Sign In with Apple** are enabled.
-4. Replace any placeholder CloudKit container IDs or app identifiers.
-5. Run on a real device or simulator (iCloud and Apple Sign-In work best on-device).
-
-## 🧠 Ideas for Future Additions
-
-- 📊 Smart streak insights using AI (progress prediction, personalized motivation)
-- 🗣️ Voice journaling with speech-to-text
-- 📥 Export or share progress summaries
-- 🔔 Custom habit reminders or accountability nudges
-
-## 👤 Author
-
-Developed with focus and vision by RW 💡  
-*“Small steps. Real change.”*
+1. Open the `.xcodeproj` or `.xcworkspace` file in **Xcode** (version 14 or later recommended).
+2. Make sure you are signed in with a valid **Apple Developer account**.
+3. Enable **iCloud** and **Sign In with Apple** capabilities for your app target.
+4. Choose a real iOS device or simulator, then press **Run (⌘R)**.
+5. For full CloudKit functionality and Apple Sign-In, test on a **physical device** signed in to iCloud.
 
 ---
 
+Still growing — one drop at a time 💧  
+Designed and built with intention by RW.

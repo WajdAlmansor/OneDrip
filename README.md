@@ -24,13 +24,14 @@ All data is stored securely in **Apple’s CloudKit**, not Firebase. The app avo
 
 ## 🚀 How to Run the Project
 
-1. Open the `.xcodeproj` or `.xcworkspace` file in **Xcode** (version 14 or later recommended).
-2. Make sure you are signed in with a valid **Apple Developer account**.
-3. Enable **iCloud** and **Sign In with Apple** capabilities for your app target.
-4. Choose a real iOS device or simulator, then press **Run (⌘R)**.
-5. For full CloudKit functionality and Apple Sign-In, test on a **physical device** signed in to iCloud.
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/WajdAlmansor/OneDrip.git
+2. Open the project:
+   ```bash
+   cd OneDrip
+   open OneDrip.xcodeproj
 
 ---
 
 Still growing — one drop at a time 💧  
-Designed and built with intention by RW.
